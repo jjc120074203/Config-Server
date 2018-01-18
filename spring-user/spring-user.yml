@@ -1,0 +1,26 @@
+server:
+  port: 1240
+
+spring:
+  application:
+    name: spring-cloud-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-boot?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: admin
+msg:
+  sys_props_switch: 3
+messagesource:
+  basename: i18n/messages
+  cache-seconds: 3600
+  encoding: UTF-8    
+#注册中心指向start    
+eureka:
+#  instance:
+#    instance-id: spring-cloud-user
+#    appname: ${spring.application.name}
+  client: 
+    service-url: 
+      defaultZone: http://admin:1q2w3e4r!@127.0.0.1:1234/eureka/
+#注册中心指向end
