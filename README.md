@@ -1,2 +1,22 @@
-# Config-Server
-Spring-Cloud-Config-Server-Test
+# 坦克大战小游戏
+
+这是一个零依赖的 HTML5 Canvas 坦克大战小游戏。
+
+## 运行方式
+
+直接用浏览器打开 `index.html`，或在仓库根目录启动一个静态服务：
+
+```bash
+python3 -m http.server 8080
+```
+
+然后访问 `http://localhost:8080`。
+
+## 操作
+
+- `W` / `A` / `S` / `D` 或方向键：移动
+- `Space`：开火
+- `P`：暂停 / 继续
+- `R`：重新开始
+
+移动端可使用页面下方的触屏按钮操作。

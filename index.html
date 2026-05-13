@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>坦克大战</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero">
+        <p class="eyebrow">HTML5 Canvas Mini Game</p>
+        <h1>坦克大战</h1>
+        <p class="subtitle">驾驶绿色坦克，击毁敌军，守住基地。</p>
+      </section>
+
+      <section class="scoreboard" aria-label="游戏状态">
+        <div>
+          <span>得分</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>生命</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div>
+          <span>关卡</span>
+          <strong id="level">1</strong>
+        </div>
+        <div>
+          <span>敌人</span>
+          <strong id="enemies">0</strong>
+        </div>
+      </section>
+
+      <section class="arena-card">
+        <canvas id="gameCanvas" width="832" height="640" aria-label="坦克大战游戏画布"></canvas>
+        <div id="overlay" class="overlay">
+          <h2>坦克大战</h2>
+          <p>方向键 / WASD 移动，空格发射炮弹。</p>
+          <button id="startButton" type="button">开始游戏</button>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="操作说明">
+        <div class="control-panel">
+          <h2>键盘操作</h2>
+          <ul>
+            <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 或方向键：移动</li>
+            <li><kbd>Space</kbd>：开火</li>
+            <li><kbd>P</kbd>：暂停 / 继续</li>
+            <li><kbd>R</kbd>：重新开始</li>
+          </ul>
+        </div>
+
+        <div class="touch-controls" aria-label="触屏操作">
+          <button data-action="up" type="button">▲</button>
+          <div>
+            <button data-action="left" type="button">◀</button>
+            <button data-action="fire" class="fire" type="button">开火</button>
+            <button data-action="right" type="button">▶</button>
+          </div>
+          <button data-action="down" type="button">▼</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
