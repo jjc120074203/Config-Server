@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+}
+
+.game-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+canvas {
+  border: 3px solid #e94560;
+  box-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
+  image-rendering: pixelated;
+}
+
+.sidebar {
+  color: #eee;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.panel h3 {
+  color: #e94560;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.stat-label {
+  color: #aaa;
+}
+
+.stat-value {
+  color: #fff;
+  font-weight: bold;
+}
+
+.controls-list {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #bbb;
+}
+
+.controls-list kbd {
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-family: monospace;
+  color: #e94560;
+  font-size: 11px;
+}
+
+#startScreen, #gameOverScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+}
+
+#startScreen h1, #gameOverScreen h1 {
+  color: #e94560;
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+}
+
+#startScreen p, #gameOverScreen p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+#gameOverScreen .final-score {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #e94560;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: #ff6b81;
+  transform: scale(1.05);
+}
+
+.lives-display {
+  display: flex;
+  gap: 4px;
+}
+
+.life-icon {
+  width: 16px;
+  height: 16px;
+  background: #e94560;
+  clip-path: polygon(50% 0%, 0% 40%, 20% 100%, 80% 100%, 100% 40%);
+}
+
+.life-icon.lost {
+  opacity: 0.2;
+}
+
+.enemy-indicator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.enemy-dot {
+  width: 12px;
+  height: 12px;
+  background: #aaa;
+  border-radius: 2px;
+}
+
+.enemy-dot.alive {
+  background: #e94560;
+}
