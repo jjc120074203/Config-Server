@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>坦克大战</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>坦克大战</h1>
+      <div id="hud">
+        <span>生命 <strong id="lives">3</strong></span>
+        <span>剩余敌军 <strong id="enemies">0</strong></span>
+        <span>得分 <strong id="score">0</strong></span>
+      </div>
+      <canvas id="gameCanvas" width="800" height="560"></canvas>
+      <p id="help">
+        WASD 或方向键移动 · 空格开火 · P 暂停 · 击毁所有敌军获胜；基地（下方黄旗）被击中则失败
+      </p>
+    </div>
+    <div id="overlay">
+      <div class="panel">
+        <h2 id="overlayTitle">准备开始</h2>
+        <p id="overlayText">点击按钮开始游戏</p>
+        <button type="button" id="overlayBtn">开始</button>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
